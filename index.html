@@ -1,149 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bot na Discordzie</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-			background-color: #f1f1f1;
-		}
-
-		header {
-			background-color: #7289da;
-			padding: 20px;
-			color: #fff;
-			text-align: center;
-			font-size: 36px;
-			margin-bottom: 20px;
-		}
-
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-
-		h2 {
-			margin-top: 0;
-			font-size: 24px;
-			color: #7289da;
-		}
-
-		p {
-			margin-top: 0;
-			font-size: 18px;
-			line-height: 1.5;
-		}
-
-		ul {
-			margin-top: 0;
-			padding-left: 20px;
-			font-size: 18px;
-			line-height: 1.5;
-		}
-
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			margin-top: 20px;
-		}
-
-		table th,
-		table td {
-			padding: 10px;
-			text-align: left;
-			border-bottom: 1px solid #ddd;
-		}
-
-		#online {
-			font-size: 24px;
-			color: #7289da;
-		}
-
-		@media only screen and (max-width: 600px) {
-			h2 {
-				font-size: 20px;
-			}
-
-			p {
-				font-size: 16px;
-			}
-
-			ul {
-				font-size: 16px;
-			}
-
-			table th,
-			table td {
-				padding: 5px;
-			}
-
-			#online {
-				font-size: 20px;
-			}
-		}
-	</style>
+	<title>Strona o botach na Discordzie</title>
 </head>
 <body>
-	<header>Bot na Discordzie</header>
-	<div class="container">
-		<h2>O bocie</h2>
-		<p>To jest bot Discorda, który został stworzony, aby pomóc administratorom i użytkownikom w zarządzaniu serwerem Discorda.</p>
-
-		<h2>Komendy</h2>
+	<header>
+		<h1>Boty na Discordzie</h1>
+	</header>
+	<nav>
 		<ul>
-			<li>!ping - wyświetla odpowiedź "Pong!"</li>
-			<li>!hello - witaj użytkownika</li>
-			<li>!kick <@użytkownik> - wyrzuca użytkownika z serwera</li>
-			<li>!ban <@użytkownik> - banuje użytkownika na serwerze</li>
-			<li>!mute <@użytkownik> - wycisza użytkownika na serwerze</li>
-			<li>!unmute <@użytkownik> - usuwa wyciszenie użytkownika na serwerze</li>
+			<li><a href="#funkcjonalnosci">Funkcjonalności</a></li>
+			<li><a href="#przyklady">Przykłady</a></li>
+			<li><a href="#kontakt">Kontakt</a></li>
 		</ul>
-
-		<h2>Użytkownicy online</h2>
-		<p>Ilość użytkowników online: <span id="online">0</span></p>
-			<table>
-		<thead>
-			<tr>
-				<th>ID użytkownika</th>
-				<th>Nazwa użytkownika</th>
-			</tr>
-		</thead>
-		<tbody id="onlineUsers">
-		</tbody>
-	</table>
-</div>
-<script>
-	// Funkcja wywołująca się po załadowaniu strony
-	document.addEventListener('DOMContentLoaded', () => {
-		// Przykładowa lista użytkowników online
-		const onlineUsers = [
-			{ id: 1, name: 'User1' },
-			{ id: 2, name: 'User2' },
-			{ id: 3, name: 'User3' },
-			{ id: 4, name: 'User4' },
-			{ id: 5, name: 'User5' }
-		];
-
-		// Wyświetlenie ilości użytkowników online
-		const onlineCount = document.querySelector('#online');
-		onlineCount.innerText = onlineUsers.length;
-
-		// Wyświetlenie listy użytkowników online
-		const onlineTable = document.querySelector('#onlineUsers');
-		onlineUsers.forEach(user => {
-			const row = document.createElement('tr');
-			const idCell = document.createElement('td');
-			idCell.innerText = user.id;
-			const nameCell = document.createElement('td');
-			nameCell.innerText = user.name;
-			row.appendChild(idCell);
-			row.appendChild(nameCell);
-			onlineTable.appendChild(row);
-		});
-	});
-</script>
+	</nav>
+	<main>
+		<section id="funkcjonalnosci">
+			<h2>Funkcjonalności bota na Discordzie</h2>
+			<p>Boty na Discordzie oferują różne funkcjonalności, takie jak:</p>
+			<ul>
+				<li>Automatyczne przypisywanie ról</li>
+				<li>Generowanie powiadomień</li>
+				<li>Kontrolowanie statusu zadań</li>
+				<li>Zapewnienie przyjaznej interakcji użytkowników z serwerem</li>
+			</ul>
+		</section>
+		<section id="przyklady">
+			<h2>Przykłady wykorzystania bota na Discordzie</h2>
+			<p>Oto kilka przykładów wykorzystania bota na Discordzie:</p>
+			<ol>
+				<li>Automatyczne przypisywanie ról w zależności od aktywności na serwerze</li>
+				<li>Generowanie powiadomień o ważnych wydarzeniach na serwerze</li>
+				<li>Kontrolowanie statusu zadań i raportowanie ich wykonania</li>
+				<li>Integracja z innymi platformami, takimi jak Twitch czy Twitter</li>
+			</ol>
+		</section>
+		<section id="kontakt">
+			<h2>Kontakt</h2>
+			<p>Jeśli masz jakieś pytania lub sugestie, skontaktuj się z nami:</p>
+			<ul>
+				<li>Adres email: kontakt@bony-na-discordzie.pl</li>
+				<li>Numer telefonu: +48 123 456 789</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>© 2023 Boty na Discordzie. Wszelkie prawa zastrzeżone.</p>
+	</footer>
 </body>
 </html>
